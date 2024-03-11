@@ -48,9 +48,9 @@ namespace SeleniumTests
         }
 
         [TearDown]
-        public void CloseBrowser()
+        protected void TearDown()
         {
-            driver?.Dispose();
+            driver.Quit();
         }
     }
 }
